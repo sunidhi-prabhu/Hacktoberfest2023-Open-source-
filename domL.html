@@ -1,0 +1,42 @@
+<!-- easy dom  -->
+ <!DOCTYPE html>
+<html>
+<body>
+  <button id="myButton">Click me</button>
+  <p id="myParagraph">This text will change.</p>
+
+  <script>
+    // TODO: Select the button and paragraph by their IDs and add a click event to change the paragraph text
+    document.getElementById("myButton").addEventListener("click", ()=>{
+      document.getElementById("myParagraph").innerHTML="changed text"
+    })
+
+  </script>
+</body>
+</html> 
+
+<!-- medium dom -->
+<!DOCTYPE html>
+<html>
+<body>
+  <ul id="myList"></ul>
+  <button id ="first">first button</button>
+  <button id ="second">second button</button>
+  <button id ="third">third button</button>
+
+  <script>
+    // TODO: Dynamically create 3 buttons and attach event listeners that add list items to the unordered list when clicked.
+    const addItem = (text) => {
+      const li = document.createElement('li');
+      li.textContent = text;
+      document.getElementById('myList').appendChild(li);
+    };
+
+    // Event listeners for each button
+    document.getElementById("first").addEventListener("click", () => addItem("First button clicked"));
+    document.getElementById("second").addEventListener("click", () => addItem("Second button clicked"));
+    document.getElementById("third").addEventListener("click", () => addItem("Third button clicked"));
+  </script>
+</body>
+</html> 
+
